@@ -1,0 +1,41 @@
+[project]
+name = "discord-voice-bot"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "cogo", email = "mvccogo@gmail.com" }
+]
+requires-python = ">=3.11"
+dependencies = [
+    "aiohttp>=3.9",
+    "av>=18.1.0",
+    "beautifulsoup4>=4.15.0",
+    "ddgs>=9.16.0",
+    "davey>=0.1.7",
+    "discord-ext-voice-recv==0.5.2a179",
+    "discord-py>=2.7.1",
+    "duckduckgo-search>=8.1.1",
+    "edge-tts>=7.3.1",
+    "faster-whisper>=1.2.1",
+    "httpx>=0.28.1",
+    "numpy>=2.4.6",
+    "nvidia-cublas-cu12>=12.9.2.10",
+    "nvidia-cudnn-cu12>=9.27.0.42",
+    "onnxruntime>=1.31.0",
+    "openai>=3.31.0",
+    "pynacl>=1.5.0",
+    "python-dotenv>=1.2.4",
+    "scipy>=1.17.1",
+    "silero-vad>=6.2.3",
+]
+
+[project.scripts]
+discord-voice-bot = "bot.main:main"
+
+[build-system]
+requires = ["uv_build>=0.13.1,<0.14.0"]
+build-backend = "uv_build"
+
+[tool.uv.build-backend]
+module-name = "bot"
